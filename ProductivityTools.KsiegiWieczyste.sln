@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.KsiegiWieczyste", "ProductivityTools.KsiegiWieczyste\ProductivityTools.KsiegiWieczyste.csproj", "{9E32383A-97EE-45BC-AF38-47E3C4C2D68F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E32383A-97EE-45BC-AF38-47E3C4C2D68F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E32383A-97EE-45BC-AF38-47E3C4C2D68F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E32383A-97EE-45BC-AF38-47E3C4C2D68F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E32383A-97EE-45BC-AF38-47E3C4C2D68F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8549E3D-6D1A-4567-8A0F-64B9EA670124}
+	EndGlobalSection
+EndGlobal
