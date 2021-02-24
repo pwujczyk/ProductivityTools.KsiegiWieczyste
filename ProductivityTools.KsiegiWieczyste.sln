@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.KsiegiWieczyste", "ProductivityTools.KsiegiWieczyste\ProductivityTools.KsiegiWieczyste.csproj", "{9E32383A-97EE-45BC-AF38-47E3C4C2D68F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.KsiegiWieczyste.App", "ProductivityTools.KsiegiWieczyste.App\ProductivityTools.KsiegiWieczyste.App.csproj", "{AAB631AC-D2DE-4B4B-991B-918D5B4BE8D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.KsiegiWieczyste.Selenium", "ProductivityTools.KsiegiWieczyste.Selenium\ProductivityTools.KsiegiWieczyste.Selenium.csproj", "{9CBCDDD7-A38B-42FC-9BAB-A45686627D7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{9E32383A-97EE-45BC-AF38-47E3C4C2D68F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E32383A-97EE-45BC-AF38-47E3C4C2D68F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E32383A-97EE-45BC-AF38-47E3C4C2D68F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAB631AC-D2DE-4B4B-991B-918D5B4BE8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB631AC-D2DE-4B4B-991B-918D5B4BE8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB631AC-D2DE-4B4B-991B-918D5B4BE8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB631AC-D2DE-4B4B-991B-918D5B4BE8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CBCDDD7-A38B-42FC-9BAB-A45686627D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CBCDDD7-A38B-42FC-9BAB-A45686627D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CBCDDD7-A38B-42FC-9BAB-A45686627D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CBCDDD7-A38B-42FC-9BAB-A45686627D7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
