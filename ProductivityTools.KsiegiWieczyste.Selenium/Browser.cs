@@ -32,7 +32,6 @@ namespace ProductivityTools.KsiegiWieczyste.Selenium
 
         public void WyszukajKsiege(string wydzial, string numer, string cyfrakontrola)
         {
-            // This will open up the URL 
             Driver.Url = "https://ekw.ms.gov.pl/eukw_ogol/menu.do";
 
             Thread.Sleep(2000);
@@ -57,13 +56,6 @@ namespace ProductivityTools.KsiegiWieczyste.Selenium
 
             var cyfraKontrolna = Driver.FindElement(By.Id("cyfraKontrolna"));
             cyfraKontrolna.SendKeys(cyfrakontrola);
-            Thread.Sleep(2000);
-            //IWebElement iframe = Driver.FindElement(By.TagName("iframe"));
-            //Driver.SwitchTo().Frame(iframe);
-            //Thread.Sleep(2000);
-
-            //var recaptcha = Driver.FindElement(By.Id("rc-anchor-container"));
-            //recaptcha.Click();
 
             Thread.Sleep(2000);
             var wyszukaj = Driver.FindElement(By.Id("wyszukaj"));
