@@ -20,9 +20,9 @@ namespace ProductivityTools.KsiegiWieczyste.Selenium
             //options.AddArgument("--headless"); //hide browser
             options.AddArgument("--start-maximized");
             //options.AddArgument("--window-size=1100,300");
-            options.AddUserProfilePreference("profile.default_content_setting_values.images", 2);
+           // options.AddUserProfilePreference("profile.default_content_setting_values.images", 2);
 
-            options.AddArgument(@"user-data-dir=C:\Users\pwujczyk\AppData\Local\Google\Chrome\User Data");
+           // options.AddArgument(@"user-data-dir=C:\Users\pwujczyk\AppData\Local\Google\Chrome\User Data");
             this.Driver = new ChromeDriver(options);
             //Driver.Manage().Window.Size = new Size(1024, 968);
             
@@ -33,7 +33,19 @@ namespace ProductivityTools.KsiegiWieczyste.Selenium
         public void WyszukajKsiege(string wydzial, string numer, string cyfrakontrola)
         {
             // This will open up the URL 
-            Driver.Url = "https://przegladarka-ekw.ms.gov.pl/eukw_prz/KsiegiWieczyste/wyszukiwanieKW?";
+            Driver.Url = "https://ekw.ms.gov.pl/eukw_ogol/menu.do";
+
+            Thread.Sleep(2000);
+            var inputs = Driver.FindElements(By.TagName("a"));
+            foreach (var input in inputs)
+            {
+                Console.WriteLine(input.GetAttribute("href"));
+                if (input.GetAttribute("href") == "https://ekw.ms.gov.pl/eukw_ogol/KsiegiWieczyste")
+                {
+                    input.Click();
+                    break;
+                }
+            }
 
             var kodWydzialu = Driver.FindElement(By.Id("kodWydzialuInput"));
             kodWydzialu.SendKeys(wydzial);
@@ -46,12 +58,12 @@ namespace ProductivityTools.KsiegiWieczyste.Selenium
             var cyfraKontrolna = Driver.FindElement(By.Id("cyfraKontrolna"));
             cyfraKontrolna.SendKeys(cyfrakontrola);
             Thread.Sleep(2000);
-            IWebElement iframe = Driver.FindElement(By.TagName("iframe"));
-            Driver.SwitchTo().Frame(iframe);
-            Thread.Sleep(2000);
+            //IWebElement iframe = Driver.FindElement(By.TagName("iframe"));
+            //Driver.SwitchTo().Frame(iframe);
+            //Thread.Sleep(2000);
 
-            var recaptcha = Driver.FindElement(By.Id("rc-anchor-container"));
-            recaptcha.Click();
+            //var recaptcha = Driver.FindElement(By.Id("rc-anchor-container"));
+            //recaptcha.Click();
 
             Thread.Sleep(2000);
             var wyszukaj = Driver.FindElement(By.Id("wyszukaj"));
