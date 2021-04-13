@@ -19,6 +19,8 @@ namespace ProductivityTools.KsiegiWieczyste.App
             this.Browser.PobierzDzialPierwszy(numer);
             this.Browser.ZaladujDzialDrugi();
             this.Browser.PobierzDetaleDzialuDrugiego(numer);
+            this.Browser.ZaladujDzialCzwarty();
+            this.Browser.PobierzDetaleDzialuCzwartego(numer);
         }
     }
 }

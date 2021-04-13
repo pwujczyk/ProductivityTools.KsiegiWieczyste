@@ -158,11 +158,62 @@ namespace ProductivityTools.KsiegiWieczyste.Selenium
             }
         }
 
+        public void PobierzDetaleDzialuCzwartego(string numer)
+        {
+            Dzial4 dzial4 = null; ;
+            var trs = Driver.FindElements(By.TagName("TR"));
+            foreach (var tr in trs)
+            {
+                var tds = tr.FindElements(By.TagName("td"));
+
+                // Console.WriteLine($"tds:{i} == {tds[i].Text}");
+                if (tds[0].Text.StartsWith("Rodzaj hipoteki"))
+                {
+                    dzial4 = new Dzial4();
+                    dzial4.NumerKsiegi = numer;
+
+                    dzial4.RodzajHipoteki = tds[1].Text;
+                }
+
+                if (tds[0].Text.StartsWith("Suma"))
+                {
+                    string kwota = tds[1].Text;
+                    int koniecKwoty = kwota.IndexOf("(");
+                    string samawartosc = kwota.Substring(0, koniecKwoty);
+
+                    decimal wartosc;
+                    decimal.TryParse(samawartosc, out wartosc);
+                    dzial4.Kwota = wartosc;
+                }
+
+                if (tds[0].Text.StartsWith("Wierzytelność"))
+                {
+                    dzial4.Kredyt = tds[3].Text;
+                }
+
+                if (tds[0].Text.StartsWith("Inna osoba prawna"))
+                {
+                    dzial4.Wierzyciel = tds[2].Text;
+                }
+            }
+
+            if (dzial4 != null)
+            {
+                //context.Dzial4.Add(dzial4);
+                //context.SaveChanges();
+            }
+        }
+
 
 
         public  void ZaladujDzialDrugi()
         {
             ZaladujDzial("Dział II");
+        }
+
+        public void ZaladujDzialCzwarty()
+        {
+            ZaladujDzial("Dział IV");
         }
 
         private void ZaladujDzial(string dzial)
