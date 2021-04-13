@@ -15,8 +15,9 @@ namespace ProductivityTools.KsiegiWieczyste.ZaladujBudynek.Commands
 
         protected override void Invoke()
         {
-            Class1 c = new Class1();
-            c.OtworzKsiege("WA1M", "00549771", "9");
+            Application c = new Application();
+            c.OtworzKsiege("WA1M", "00550063", "3");
+            c.ZaldujKsiegeDoBazy("00550063");
             Console.WriteLine("Hello from zalduj budynek");
         }
     }

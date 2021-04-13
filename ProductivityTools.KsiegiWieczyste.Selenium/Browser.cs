@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using ProductivityTools.KsiegiWieczyste.Model;
 using System;
 using System.Drawing;
 using System.Threading;
@@ -60,6 +61,123 @@ namespace ProductivityTools.KsiegiWieczyste.Selenium
             Thread.Sleep(2000);
             var wyszukaj = Driver.FindElement(By.Id("wyszukaj"));
             wyszukaj.Click();
+        }
+
+
+
+        public void ZaladujPrzegladanieAktualnejTresci()
+        {
+            Thread.Sleep(5000);
+            var przegladanieAktualnejTresci = Driver.FindElement(By.Id("przyciskWydrukZwykly"));
+            przegladanieAktualnejTresci.Click();
+        }
+
+        public void PobierzDzialPierwszy(string numer)
+        {
+            Dzial1 dzial1 = new Dzial1();
+            dzial1.NumerKsiegi = numer;
+            var trs = Driver.FindElements(By.TagName("TR"));
+            foreach (var tr in trs)
+            {
+                var tds = tr.FindElements(By.TagName("td"));
+
+                // Console.WriteLine($"tds:{i} == {tds[i].Text}");
+                if (tds[0].Text.StartsWith("Ulica"))
+                {
+                    dzial1.NumerBudynku = tds[4].Text;
+                    dzial1.NumerLokalu = tds[5].Text;
+                }
+
+                if (tds[0].Text.StartsWith("Identyfikator lokalu"))
+                {
+                    dzial1.IdentyfikatorLokalu = tds[1].Text;
+                }
+
+                if (tds[0].Text.StartsWith("Przeznaczenie lokalu"))
+                {
+                    dzial1.PrzeznaczenieLokalu = tds[1].Text;
+                }
+
+                if (tds[0].Text.StartsWith("Opis lokalu"))
+                {
+                    dzial1.OpisLokalu = tds[1].Text;
+                }
+
+                if (tds[0].Text.StartsWith("Opis pomieszcze"))
+                {
+                    dzial1.OpisPomieszczenPrzynaleznych = tds[1].Text;
+                }
+
+
+                if (tds[0].Text.StartsWith("Kondygnacja"))
+                {
+                    int kondygancja = -1000;
+                    int.TryParse(tds[1].Text, out kondygancja);
+                    dzial1.Kondygnacja = kondygancja;
+                }
+
+                if (tds[0].Text.StartsWith("Pole powierzchni"))
+                {
+                    string s = tds[1].Text;
+                    s = s.Replace("M2", "").Trim();
+                    float powierzchnia = 0;
+                    float.TryParse(s, out powierzchnia);
+                    dzial1.PowierzchniaRazemZPrzynaleznymi = powierzchnia;
+                }
+
+            }
+
+            //context.Dzial1.Add(dzial1);
+            //context.SaveChanges();
+        }
+
+        public void PobierzDetaleDzialuDrugiego(string numer)
+        {
+
+            var trs = Driver.FindElements(By.TagName("TR"));
+            foreach (var tr in trs)
+            {
+                var tds = tr.FindElements(By.TagName("td"));
+
+                // Console.WriteLine($"tds:{i} == {tds[i].Text}");
+                if (tds[0].Text.StartsWith("Osoba fizyczna"))
+                {
+                    Dzial2 dzial2 = new Dzial2();
+                    dzial2.NumerKsiegi = numer;
+
+                    string txt = tds[1].Text;
+                    var parts = txt.Split(',');
+                    dzial2.Nazwa = parts[0];
+                    dzial2.ImieOjca = parts[1];
+                    dzial2.ImieMatki = parts[2];
+                    dzial2.Pesel = parts[3];
+
+                    //context.Dzial2.Add(dzial2);
+                    //context.SaveChanges();
+                }
+            }
+        }
+
+
+
+        public  void ZaladujDzialDrugi()
+        {
+            ZaladujDzial("Dział II");
+        }
+
+        private void ZaladujDzial(string dzial)
+        {
+            Thread.Sleep(2000);
+            var inputs = Driver.FindElements(By.TagName("input"));
+            foreach (var input in inputs)
+            {
+                Console.WriteLine(input.GetAttribute("value"));
+                if (input.GetAttribute("value") == dzial)
+                {
+                    input.Click();
+                    break;
+                }
+            }
         }
     }
 }

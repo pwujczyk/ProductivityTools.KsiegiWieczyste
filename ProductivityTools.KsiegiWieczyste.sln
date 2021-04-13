@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.KsiegiWieczyste", "ProductivityTools.KsiegiWieczyste\ProductivityTools.KsiegiWieczyste.csproj", "{9E32383A-97EE-45BC-AF38-47E3C4C2D68F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.KsiegiWieczyste", "ProductivityTools.KsiegiWieczyste\ProductivityTools.KsiegiWieczyste.csproj", "{9E32383A-97EE-45BC-AF38-47E3C4C2D68F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.KsiegiWieczyste.App", "ProductivityTools.KsiegiWieczyste.App\ProductivityTools.KsiegiWieczyste.App.csproj", "{AAB631AC-D2DE-4B4B-991B-918D5B4BE8D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.KsiegiWieczyste.App", "ProductivityTools.KsiegiWieczyste.App\ProductivityTools.KsiegiWieczyste.App.csproj", "{AAB631AC-D2DE-4B4B-991B-918D5B4BE8D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.KsiegiWieczyste.Selenium", "ProductivityTools.KsiegiWieczyste.Selenium\ProductivityTools.KsiegiWieczyste.Selenium.csproj", "{9CBCDDD7-A38B-42FC-9BAB-A45686627D7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.KsiegiWieczyste.Selenium", "ProductivityTools.KsiegiWieczyste.Selenium\ProductivityTools.KsiegiWieczyste.Selenium.csproj", "{9CBCDDD7-A38B-42FC-9BAB-A45686627D7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.KsiegiWieczyste.Model", "ProductivityTools.KsiegiWieczyste.Model\ProductivityTools.KsiegiWieczyste.Model.csproj", "{2984A145-805A-4A32-B4DE-CA2C4C49D45E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{9CBCDDD7-A38B-42FC-9BAB-A45686627D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CBCDDD7-A38B-42FC-9BAB-A45686627D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CBCDDD7-A38B-42FC-9BAB-A45686627D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2984A145-805A-4A32-B4DE-CA2C4C49D45E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2984A145-805A-4A32-B4DE-CA2C4C49D45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2984A145-805A-4A32-B4DE-CA2C4C49D45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2984A145-805A-4A32-B4DE-CA2C4C49D45E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

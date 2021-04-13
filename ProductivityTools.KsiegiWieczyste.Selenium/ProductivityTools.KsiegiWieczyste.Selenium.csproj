@@ -10,4 +10,8 @@
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="88.0.4324.9600" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProductivityTools.KsiegiWieczyste.Model\ProductivityTools.KsiegiWieczyste.Model.csproj" />
+  </ItemGroup>
+
 </Project>
