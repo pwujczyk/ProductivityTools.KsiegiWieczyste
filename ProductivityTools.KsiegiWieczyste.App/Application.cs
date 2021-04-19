@@ -15,12 +15,28 @@ namespace ProductivityTools.KsiegiWieczyste.App
 
         public void ZaldujKsiegeDoBazy(string numer)
         {
+            var ksiega = new Model.Ksiega();
             this.Browser.ZaladujPrzegladanieAktualnejTresci();
-            this.Browser.PobierzDzialPierwszy(numer);
+            this.Browser.PobierzDzialPierwszy(numer, ksiega);
             this.Browser.ZaladujDzialDrugi();
-            this.Browser.PobierzDetaleDzialuDrugiego(numer);
+            this.Browser.PobierzDetaleDzialuDrugiego(numer, ksiega);
             this.Browser.ZaladujDzialCzwarty();
-            this.Browser.PobierzDetaleDzialuCzwartego(numer);
+            this.Browser.PobierzDetaleDzialuCzwartego(numer, ksiega);
+        }
+
+        public void ZaldujKsiegeDoBaz2y(string numer)
+        {
+            var ksiega = new Model.Ksiega();
+            ksiega.Dzial1 = new Model.Dzial1();
+            ksiega.Dzial1.IdentyfikatorLokalu = "98";
+            ksiega.Dzial1.Kondygnacja = 3;
+            ksiega.Dzial1.NumerBudynku = "3b";
+            ksiega.Dzial1.NumerKsiegi = "fdsa";
+        }
+
+        private void SendToDatabase(Model.Ksiega ksiega)
+        {
+
         }
     }
 }

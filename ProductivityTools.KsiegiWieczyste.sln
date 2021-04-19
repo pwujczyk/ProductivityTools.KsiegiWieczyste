@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.KsiegiWie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.KsiegiWieczyste.Selenium", "ProductivityTools.KsiegiWieczyste.Selenium\ProductivityTools.KsiegiWieczyste.Selenium.csproj", "{9CBCDDD7-A38B-42FC-9BAB-A45686627D7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.KsiegiWieczyste.Model", "ProductivityTools.KsiegiWieczyste.Model\ProductivityTools.KsiegiWieczyste.Model.csproj", "{2984A145-805A-4A32-B4DE-CA2C4C49D45E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.KsiegiWieczyste.Model", "ProductivityTools.KsiegiWieczyste.Model\ProductivityTools.KsiegiWieczyste.Model.csproj", "{2984A145-805A-4A32-B4DE-CA2C4C49D45E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.KsiegiWieczyste.ApiClient", "ProductivityTools.KsiegiWieczyste.ApiClient\ProductivityTools.KsiegiWieczyste.ApiClient.csproj", "{D3371335-0D73-42F2-896B-F17C8233BAE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{2984A145-805A-4A32-B4DE-CA2C4C49D45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2984A145-805A-4A32-B4DE-CA2C4C49D45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2984A145-805A-4A32-B4DE-CA2C4C49D45E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3371335-0D73-42F2-896B-F17C8233BAE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3371335-0D73-42F2-896B-F17C8233BAE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3371335-0D73-42F2-896B-F17C8233BAE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3371335-0D73-42F2-896B-F17C8233BAE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

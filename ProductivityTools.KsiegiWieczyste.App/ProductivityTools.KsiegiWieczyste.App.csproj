@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ProductivityTools.KsiegiWieczyste.Model\ProductivityTools.KsiegiWieczyste.Model.csproj" />
     <ProjectReference Include="..\ProductivityTools.KsiegiWieczyste.Selenium\ProductivityTools.KsiegiWieczyste.Selenium.csproj" />
   </ItemGroup>
 

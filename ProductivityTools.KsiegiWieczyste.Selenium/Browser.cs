@@ -72,7 +72,7 @@ namespace ProductivityTools.KsiegiWieczyste.Selenium
             przegladanieAktualnejTresci.Click();
         }
 
-        public void PobierzDzialPierwszy(string numer)
+        public void PobierzDzialPierwszy(string numer, Model.Ksiega ksiega)
         {
             Dzial1 dzial1 = new Dzial1();
             dzial1.NumerKsiegi = numer;
@@ -126,12 +126,10 @@ namespace ProductivityTools.KsiegiWieczyste.Selenium
                 }
 
             }
-
-            //context.Dzial1.Add(dzial1);
-            //context.SaveChanges();
+            ksiega.Dzial1 = dzial1;
         }
 
-        public void PobierzDetaleDzialuDrugiego(string numer)
+        public void PobierzDetaleDzialuDrugiego(string numer, Model.Ksiega ksiega)
         {
 
             var trs = Driver.FindElements(By.TagName("TR"));
@@ -152,13 +150,12 @@ namespace ProductivityTools.KsiegiWieczyste.Selenium
                     dzial2.ImieMatki = parts[2];
                     dzial2.Pesel = parts[3];
 
-                    //context.Dzial2.Add(dzial2);
-                    //context.SaveChanges();
+                    ksiega.Dzial2.Add(dzial2);
                 }
             }
         }
 
-        public void PobierzDetaleDzialuCzwartego(string numer)
+        public void PobierzDetaleDzialuCzwartego(string numer, Model.Ksiega ksiega)
         {
             Dzial4 dzial4 = null; ;
             var trs = Driver.FindElements(By.TagName("TR"));
@@ -199,6 +196,7 @@ namespace ProductivityTools.KsiegiWieczyste.Selenium
 
             if (dzial4 != null)
             {
+                ksiega.Dzial4 = dzial4;              
                 //context.Dzial4.Add(dzial4);
                 //context.SaveChanges();
             }

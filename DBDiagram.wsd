@@ -1,0 +1,25 @@
+@startuml
+
+title Database
+
+
+class Budynek {
+  BudynekId
+  Address
+}
+
+class Ksiega{
+    KsiegaId
+    NumerKsiegi
+}
+
+class Dzial1
+class Dzial2
+class Dzial4
+
+Budynek -down-> Ksiega
+Ksiega -down-> Dzial1
+Ksiega -down-> Dzial2
+Ksiega -down-> Dzial4
+
+@enduml
