@@ -1,4 +1,5 @@
-﻿using ProductivityTools.KsiegiWieczyste.Selenium;
+﻿using ProductivityTools.KsiegiWieczyste.ApiClient;
+using ProductivityTools.KsiegiWieczyste.Selenium;
 using System;
 using System.Xml.Schema;
 
@@ -36,7 +37,8 @@ namespace ProductivityTools.KsiegiWieczyste.App
 
         private void SendToDatabase(Model.Ksiega ksiega)
         {
-
+            Client client = new Client();
+            client.Sent(ksiega);
         }
     }
 }
